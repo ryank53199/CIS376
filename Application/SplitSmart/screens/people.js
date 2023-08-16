@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import React from 'react';
 
-const PeopleScreen = () => {
+const PeopleScreen = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <Text style={styles.header}>Messages</Text>
@@ -10,7 +10,8 @@ const PeopleScreen = () => {
             <View style={styles.toggleButton}>
                 <Button
                     title="Toggle"
-                    style={styles.toggleButton}
+                    onPress={() => navigation.navigate('Items')}
+                    //style={styles.toggleButton}
                 />
             </View>
         </View>
