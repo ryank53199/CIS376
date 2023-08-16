@@ -5,7 +5,7 @@ import { StyleSheet, Text, View, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import InfoScreen from './screens/info';
+import PeopleScreen from './screens/people';
 
 const Stack = createStackNavigator();
 
@@ -14,7 +14,7 @@ const App = () => {
         <NavigationContainer>
             <Stack.Navigator initialRouteName="Home">
                 <Stack.Screen name="Home" component={HomeScreen} />
-                <Stack.Screen name="Info" component={InfoScreen} />
+                <Stack.Screen name="People" component={PeopleScreen} />
             </Stack.Navigator>
         </NavigationContainer>
 
@@ -27,7 +27,7 @@ const HomeScreen = ({ navigation }) => {
       <Text>Go blue!</Text>
       <Button
         title="Click Me"
-        onPress={() => navigation.navigate('Info')}
+        onPress={() => navigation.navigate('People')}
       />
     </View>
   );
