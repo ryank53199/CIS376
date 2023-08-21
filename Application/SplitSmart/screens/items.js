@@ -1,12 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View, Button, Image } from 'react-native';
 import React from 'react';
 
 const ItemScreen = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <Text style={styles.header}>Messages</Text>
-            <Text style={styles.label}>Items</Text>
             <View style={styles.toggleButton}>
                 <Button
                     title="Toggle"
@@ -14,6 +13,10 @@ const ItemScreen = ({ navigation }) => {
                     // style={styles.toggleButton}
                 />
             </View>
+            <Image
+                source={require('../assets/umds2s.png')}
+                style={styles.pic}
+            />
         </View>
     );
 };
@@ -44,6 +47,11 @@ const styles = StyleSheet.create({
         top: 10,
         right: 10,
     },
+
+    pic: {
+        width: 150,
+        height: 150,
+    }
 
 });
 

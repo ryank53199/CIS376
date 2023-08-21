@@ -1,12 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View, Button, Image } from 'react-native';
 import React from 'react';
 
 const PeopleScreen = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <Text style={styles.header}>Messages</Text>
-            <Text style={styles.label}>People</Text>
             <View style={styles.toggleButton}>
                 <Button
                     title="Toggle"
